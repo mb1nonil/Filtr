@@ -15,7 +15,6 @@ namespace UnitTestProject2
 
     public class Property
     {
-        public Guid Id { get; set; }
         public string Value { get; set; }
         public PropertyType Type { get; set; }
 
@@ -25,6 +24,7 @@ namespace UnitTestProject2
     {
         Storlek,
         Farg,
-        Marke
+        Marke,
+        Doft
     }
 }

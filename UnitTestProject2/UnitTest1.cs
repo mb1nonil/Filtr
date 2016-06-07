@@ -142,7 +142,7 @@ namespace UnitTestProject2
                 }
             });
 
-            Assert.AreEqual(2, res.Count);
+            Assert.AreEqual(4, res.Count);
 
             res = Filtr.Go(new List<Filter>
             {
@@ -179,6 +179,50 @@ namespace UnitTestProject2
             });
 
             Assert.AreEqual(1, res.Count);
+        }
+
+
+        [TestMethod]
+        public void TestMethod4()
+        {
+
+
+            var res = Filtr.Go(new List<Filter>
+            {
+                new Filter
+                {
+                    Execute = true,
+                    PropertyType = PropertyType.Doft,
+                    Value = "citron"
+                }
+            });
+
+            Assert.AreEqual(1, res.Count);
+
+        }
+        [TestMethod]
+        public void TestMethod5()
+        {
+
+
+            var res = Filtr.Go(new List<Filter>
+            {
+                new Filter
+                {
+                    Execute = true,
+                    PropertyType = PropertyType.Marke,
+                    Value = "Addidas"
+                },
+                new Filter
+                {
+                    Execute = true,
+                    PropertyType = PropertyType.Storlek,
+                    Value = "XL"
+                }
+            });
+
+            Assert.AreEqual(2, res.Count);
+
         }
     }
 }
